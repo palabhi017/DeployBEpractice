@@ -25,7 +25,7 @@ productRouter.get("/",async(req,res)=>{
    
       res.status(200).send(user)
 } catch (error) {
-   res.status(400).json({"err":"bad request"})
+   res.status(400).json({"err":error})
  }
  
 })
