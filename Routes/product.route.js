@@ -19,9 +19,9 @@ productRouter.post("/add",async(req,res)=>{
  
 }) 
 productRouter.get("/",async(req,res)=>{ 
-  const {email,password}=req.body
+
   try {
-    const user=await productModel.find({email,password})
+    const user=await productModel.find()
    
       res.status(200).send(user)
 } catch (error) {
